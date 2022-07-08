@@ -1,10 +1,8 @@
-FROM ubuntu:20.04
+FROM rhel7
+RUN yum install -y python python-pip
+RUN yum install -y python36 
 
-RUN apt-get update && apt-get install -y python python3-pip
-
-RUN pip install flask 
-
-RUN pip install --upgrade pip
+RUN pip3 install
 
 COPY app.py /opt/
 
