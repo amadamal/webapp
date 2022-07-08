@@ -2,7 +2,7 @@ FROM rhel7
 RUN yum install -y python python-pip
 RUN yum install -y python36 
 
-RUN pip3 install
+RUN pip3 install flask
 
 COPY app.py /opt/
 
